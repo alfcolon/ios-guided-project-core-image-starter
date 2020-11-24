@@ -23,8 +23,9 @@ extension UIImage {
             correctedSize.height = correctedSize.height/originalAspectRatio
         }
         
-        return UIGraphicsImageRenderer(size: correctedSize, format: imageRendererFormat).image { context in
-            draw(in: CGRect(origin: .zero, size: correctedSize))
+        return UIGraphicsImageRenderer(size: correctedSize, format: imageRendererFormat).image {
+            context in
+                draw(in: CGRect(origin: .zero, size: correctedSize))
         }
     }
     
